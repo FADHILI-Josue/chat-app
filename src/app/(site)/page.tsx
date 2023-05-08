@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { FC } from 'react'
-import Authform from '../components/Authform'
+import Authform from './components/Authform'
 
 interface pageProps {
   
