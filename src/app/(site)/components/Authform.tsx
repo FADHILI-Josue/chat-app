@@ -51,14 +51,14 @@ const Authform: FC<AuthformProps> = ({}) => {
     <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
         <form className=' space-y-6' onSubmit={handleSubmit(onSubmit)}>
             {variant === 'REGISTER'&& <Input id='name' label='Name' register={register} errors={errors}/>}
-            <Input id='email' label='Email' type='email' register={register} errors={errors}/>
-            <Input id='password' label='Password' type='password' register={register} errors={errors}/>
-        </form>
+            <Input id='email' label='Email' type='email' register={register} errors={errors} disabled={loading}/>
+            <Input id='password' label='Password' type='password' register={register} errors={errors} disabled={loading}/>
         <div className="mt-4">
             <Button type='submit' disabled={loading} fullWidth className='hover:scale-[1.03] active:scale-[0.98] bg-gradient-to-tr from-blue-500 to-rose-500'>
                 {variant === 'LOGIN'? 'Sign in':'Register'}
             </Button>
         </div>
+        </form>
         <div className="mt-6">
             <div className="relative">
                 <div className="absolute inset-0 flex items-center">
